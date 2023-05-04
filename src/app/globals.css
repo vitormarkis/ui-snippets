@@ -6,4 +6,11 @@
   --button-height: 42px;
   --button-padding-x: 42px;
   --button-border-radius: 12px;
+
+  --border-color: #737373;
+  --padding-xl: 2rem;
+  --padding-lg: 1rem;
+  --padding-md: 0.75rem;
+  --padding-sm: 0.5rem;
+  --padding-xs: 0.25rem;
 }

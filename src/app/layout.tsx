@@ -15,11 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={
-          inter.className + " h-screen grid place-items-center bg-neutral-950"
-        }
-      >
+      <body className={inter.className + " h-screen bg-neutral-950 text-white"}>
         {children}
       </body>
     </html>
