@@ -1,0 +1,71 @@
+.container * {
+  all: unset;
+}
+
+.container {
+  --border-radius: var(--button-border-radius);
+  --zindex: 0;
+  height: var(--button-height);
+  position: relative;
+  background: #000;
+  padding-inline: var(--button-padding-x);
+  border-radius: var(--border-radius);
+  display: grid;
+  place-items: center;
+  color: white;
+  transition: all 700ms;
+  cursor: pointer;
+}
+
+.container:hover {
+  transform: scale(1.05);
+  background: #000;
+  z-index: 20;
+}
+
+.border {
+  position: absolute;
+  inset: -1px;
+  z-index: calc(var(--zindex) - 1);
+  overflow: hidden;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  border-radius: inherit;
+}
+
+.background {
+  position: absolute;
+  inset: 0px;
+  z-index: calc(var(--zindex) - 1);
+  background: #000;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.border::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: inherit;
+  border-radius: inherit;
+  left: 50%;
+  top: 50%;
+  width: calc(100% * 2);
+  padding-bottom: calc(100% * 2);
+  transform: translate(-50%, -50%) rotate(0deg);
+  background: conic-gradient(from 180deg at 50% 50%,
+      #04ff26 0deg,
+      #000000 360deg);
+  animation: spinning 5s linear infinite;
+}
+
+@keyframes spinning {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+.text {}

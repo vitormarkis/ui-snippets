@@ -1,0 +1,45 @@
+.container {
+  --border-radius: var(--button-border-radius);
+  --button-plate-z-index: 0;
+  display: grid;
+  position: relative;
+  place-items: center;
+  border-radius: var(--border-radius);
+  height: var(--button-height);
+  padding-inline: var(--button-padding-x);
+  background-color: #000;
+  line-height: 1;
+  color: #fff;
+
+  transition: height 700ms, width 700ms;
+}
+
+.container:focus-within {
+  outline-width: 1px;
+  outline-offset: 2px;
+  outline-color: #fff;
+  outline-style: solid;
+}
+
+.reflectBorder {
+  position: absolute;
+  background-color: #000;
+  background-image: linear-gradient(45deg, #d6d6d6, #cacaca75 33%, #cacaca75 67%, #ffffff);
+  inset: -1px;
+  border-radius: calc(var(--border-radius) + 1px);
+  z-index: calc(var(--button-plate-z-index) + -1);
+}
+
+.plateBorder {
+  position: absolute;
+  background-color: #000;
+  background-image: linear-gradient(45deg, #1a1a1a, #63636375 33%, #88888875 67%, #0303039f);
+  inset: -2px;
+  border-radius: calc(var(--border-radius) + 1px);
+  z-index: calc(var(--button-plate-z-index) + -1);
+}
+
+.text {
+  all: unset;
+
+}
