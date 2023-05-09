@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 :root {
   --button-height: 42px;
   --button-padding-x: 42px;

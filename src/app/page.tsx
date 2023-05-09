@@ -1,6 +1,7 @@
 import { ButtonPlate } from "@/components/ButtonPlate";
 import { ButtonClockLine } from "@/components/ButtonClockLine";
 import st from "./page.module.css";
+import { ButtonClockLineMask } from "@/components/ButtonClockLineMask";
 
 export default function Home() {
   return (
@@ -16,6 +17,9 @@ export default function Home() {
         <div className={st.snippet_container}>
           <span className={st.hoverable}>hoover</span>
           <ButtonClockLine />
+        </div>
+        <div className={st.snippet_container}>
+          <ButtonClockLineMask />
         </div>
       </div>
     </div>
